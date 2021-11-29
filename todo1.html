@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ToDo App</title>
+<style>
+    .todo-Item[status="completed"] {
+        text-decoration: line-through;
+    }
+</style>
+</head>
+<body>
+<div>
+    <input type="text" placeholder="enter your text" id="todo-editor" />
+    <button id="add-btn">Add</button>
+    <button onclick="markAll()" id="mark-all-as-completed">Mark all as completed</button>
+</div>
+    <ol id="todo-list">
+        <li class="todo-Item" id="todo-1">
+            <span>Make sample videos</span>
+             <button>Edit</button>
+              <button>Delete</button>
+              <button onclick="markAsCompleted(`todo-1`)">Mark as completed</button>
+        </li>
+        <li class="todo-Item" id="todo-2">
+            <span>Prepare sample videos</span>
+            <button>Edit</button> 
+            <button>Delete</button>
+            <button onclick="markAsCompleted(`todo-2`)">Mark as completed</button>
+        </li>
+        <li class="todo-Item" id="todo-3" status="completed">
+            <span>Check sample videos</span>
+            <button>Edit</button> 
+            <button>Delete</button>
+            <button onclick="markAsCompleted(`todo-3`)">Mark as completed</button>
+        </li>
+    </ol>
+
+</body>
+<script src="./todo.js"></script>
+</html>
